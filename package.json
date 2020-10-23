@@ -9,10 +9,11 @@
   },
   "dependencies": {
     "next": "latest",
+    "next-pwa": "3.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "license": "MIT",
   "keywords": [],
-  "description": ""
+  "description": "Hello! I'm Nathan Pham. Passionate about technology, agriculture, and healthcare."
 }

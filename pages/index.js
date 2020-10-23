@@ -1,12 +1,11 @@
-import Link from 'next/link'
+import Root from "../components/root";
 
-export default function IndexPage() {
+const Index = () => {
   return (
-    <div>
-      Hello World.{' '}
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </div>
-  )
-}
+    <Root>
+      <p>Hello World</p>
+    </Root>
+  );
+};
+
+export default Index;
