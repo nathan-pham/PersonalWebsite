@@ -23,7 +23,7 @@ const Seo = (props) => {
       />
       <meta property="og:author" content="Nathan Pham" />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content="/icons/android-icon-192x192.png" />
+      <meta property="og:image" content="/icons/apple-icon.png" />
       <meta property="og:title" content={title} />
       <title>{title}</title>
 
