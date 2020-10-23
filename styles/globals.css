@@ -1,5 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
-
+:root {
+  --crayola: #f5cb5c;
+  --eerie: #242423;
+  --white: #e8eddf;
+  --wolf: #cfdbd5;
+  --jet: #333533;
+}
 html,
 body {
   height: 100%;
@@ -15,6 +20,33 @@ body {
   box-sizing: inherit;
   font-family: inherit;
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 3rem;
+}
+.header > img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.5rem;
+  object-fit: center;
+}
+.header > div {
+  height: 0.25rem;
+  width: 3rem;
+  border-radius: 5rem;
+}
+
+.flex {
+  display: flex;
+}
+.flex .between {
+  justify-content: space-between;
+}
+
 .title {
   font-family: "Lato", sans-serif;
 }
