@@ -1,0 +1,63 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0.5rem 3rem;
+  z-index: 10;
+  border-bottom: 0.1rem solid var(--wolf);
+  backdrop-filter: blur(0.5rem);
+  user-select: none;
+}
+.header > img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.5rem;
+  object-fit: center;
+}
+.header > div {
+  cursor: pointer;
+}
+.header .hamburger,
+.header .hamburger::before,
+.header .hamburger::after {
+  height: 0.3rem;
+  border-radius: 5rem;
+  background: var(--eerie);
+}
+.header .hamburger {
+  width: 2rem;
+  position: relative;
+}
+.header .hamburger::before,
+.header .hamburger::after {
+  content: "";
+  display: block;
+  width: 60%;
+  position: absolute;
+}
+.header .hamburger::before {
+  transform: translateY(-0.5rem);
+}
+.header .hamburger::after {
+  right: 0;
+  transform: translateY(0.5rem);
+}
+
+.modal {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
