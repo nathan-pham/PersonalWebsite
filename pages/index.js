@@ -5,7 +5,9 @@ const Index = () => {
   return (
     <Root>
       <Header></Header>
-      <p>Hello World</p>
+      <div className="header-padding">
+        <p>Hello World</p>
+      </div>
     </Root>
   );
 };
