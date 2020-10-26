@@ -1,56 +1,100 @@
-import React, { Component } from "react";
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-//https://medium.com/@joethedave/achieving-ui-animations-with-react-the-right-way-562fa8a91935
-//https://reactjs.org/docs/animation.html
-//https://blog.bitsrc.io/build-a-simple-modal-component-with-react-16decdc111a6
-//https://medium.com/atheros/fade-in-and-fade-out-animation-with-spring-and-transition-react-hooks-114eddbd74a7
+import React, { useState } from "react";
+import { useTransition, animated } from "react-spring";
 import styles from "./header.module.css";
 
-class Modal extends Component {
-  render() {
-    let classes = ["header-padding", styles.modal];
-    if (this.props.show) {
-      classes.push(styles.show);
-    }
+const Title = (props) => {
+  return (
+    <h1 className="title">
+      <a href={props.href || "#"}>{props.children}</a>
+    </h1>
+  );
+};
 
-    return (
-      <div className={classes.join(" ")}>
-        <h1 className="title">Hello World</h1>
+const Modal = ({ style }) => {
+  return (
+    <animated.div style={style} className={[styles.modal]}>
+      <div>
+        <Title>Home</Title>
+        <Title>Projects</Title>
+        <Title>Blog</Title>
+        <Title>About</Title>
+        <Title>Contact</Title>
       </div>
-    );
-  }
-}
+    </animated.div>
+  );
+};
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false
-    };
-    this.showModal = this.showModal.bind(this);
-  }
-  showModal() {
-    this.setState((state) => {
-      return {
-        show: !state.show
-      };
-    });
-  }
-  render() {
-    return (
-      <>
-        <header
-          className={`${styles.header} flex justify-between align-center`}
+const Header = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const transitions = useTransition(modalVisible, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  });
+
+  return (
+    <>
+      <header
+        className={[
+          styles.header,
+          "flex",
+          "direction-column",
+          "justify-between",
+          "align-center",
+        ].join(" ")}
+      >
+        <img src="/icons/apple-icon.png" alt="N Logo" />
+        <div
+          onClick={() => setModalVisible(!modalVisible)}
+          className={["flex", "align-center", "justify-center"].join(" ")}
         >
-          <img src="/icons/apple-icon.png" alt="N Logo" />
-          <div onClick={this.showModal}>
-            <div className={styles.hamburger}></div>
-          </div>
-        </header>
-        <Modal show={this.state.show} />
-      </>
-    );
-  }
-}
+          <div
+            className={[
+              styles.hamburger,
+              modalVisible ? styles.close : "",
+            ].join(" ")}
+          ></div>
+        </div>
+      </header>
+      {transitions.map(
+        ({ item, key, props: style }) =>
+          item && <Modal style={style} key={key} />
+      )}
+    </>
+  );
+};
+
+// return (
+//   <div className="App">
+//     <button
+//       className="show-modal-button"
+//       onClick={() => setModalVisible(true)}
+//     >
+//       Show modal
+//     </button>
+//     {transitions.map(
+//       ({ item, key, props: style }) =>
+//         item && (
+//           <Modal
+//             style={style}
+//             closeModal={() => setModalVisible(false)}
+//             key={key}
+//           />
+//         )
+//     )}
+//   </div>
+
+//   <animated.div style={style} className="modal">
+//   <h3 className="modal-title">Modal title</h3>
+//   <p className="modal-content">
+//     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolores
+//     molestias praesentium impedit. Facere, perferendis voluptate at, amet
+//     excepturi ratione mollitia nemo ipsum odit impedit doloremque rerum.
+//     Quisquam, dolorum at?
+//   </p>
+//   <button className="modal-close-button" onClick={closeModal}>
+//     Close
+//   </button>
+// </animated.div>
 
 export default Header;
