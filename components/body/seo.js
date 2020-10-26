@@ -3,7 +3,7 @@ import Head from "next/head";
 let fallback = {
   description:
     "Hello! I'm Nathan Pham. Passionate about technology, healthcare, and agriculture.",
-  title: "Home"
+  title: "Home",
 };
 
 const Seo = (props) => {
@@ -117,7 +117,7 @@ const Seo = (props) => {
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Karla&family=Oswald&display=swap"
         rel="stylesheet"
       />
     </Head>

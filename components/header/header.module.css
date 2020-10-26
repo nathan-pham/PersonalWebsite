@@ -2,12 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  width: 100%;
-  padding: 0.5rem 3rem;
+  bottom: 0;
+  width: fit-content;
+  padding: 1rem;
   z-index: 10;
-  border-bottom: 0.1rem solid var(--wolf);
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.6rem);
+  background: #fff;
   user-select: none;
 }
 .header > img {
@@ -18,6 +18,8 @@
 }
 .header > div {
   cursor: pointer;
+  width: 2rem;
+  height: 1.9rem;
 }
 .header .hamburger,
 .header .hamburger::before,
@@ -25,6 +27,8 @@
   height: 0.3rem;
   border-radius: 5rem;
   background: var(--eerie);
+  transition: transform 0.3s ease, width 0.3s ease, background 0.3s ease;
+  writing-mode: vertical-rl;
 }
 .header .hamburger {
   width: 2rem;
@@ -38,26 +42,65 @@
   position: absolute;
 }
 .header .hamburger::before {
+  left: 0;
   transform: translateY(-0.5rem);
 }
 .header .hamburger::after {
   right: 0;
   transform: translateY(0.5rem);
 }
-
+.header .hamburger.close {
+  background: transparent;
+}
+.header .hamburger.close::before,
+.header .hamburger.close::after {
+  width: 100%;
+  z-index: 0;
+}
+.header .hamburger.close::before {
+  transform: rotate(45deg);
+}
+.header .hamburger.close::after {
+  transform: rotate(-45deg);
+}
 .modal {
   background: #fff;
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
+  height: 100%;
+  width: 100%;
   z-index: 5;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+  padding: 4rem calc(8vw + 5.125rem);
+  vertical-align: middle;
+  display: table;
+  line-height: 3rem;
 }
-.modal.show {
-  opacity: 1;
-  pointer-events: auto;
+.modal > div {
+  display: table-cell;
+  vertical-align: middle;
+  animation: slide-in 0.75s ease;
+}
+.modal h1 {
+  font-size: 2.5rem;
+  transition: margin 0.3s ease;
+}
+.modal h1:hover {
+  margin-left: 0.5rem;
+}
+.modal h1 a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--eerie);
+  font-weight: 300;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-4rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

@@ -12,7 +12,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Karla", sans-serif;
 }
 *,
 *::before,
@@ -20,21 +20,22 @@ body {
   box-sizing: inherit;
   font-family: inherit;
 }
-
-.header-padding {
-  padding-top: 4rem;
+.padded {
+  padding-left: 5.125rem;
 }
-
-.flex {
-  display: flex;
+.root {
+  z-index: 0;
+  position: relative;
 }
-.flex.justify-between {
-  justify-content: space-between;
-}
-.flex.align-center {
-  align-items: center;
-}
-
 .title {
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+}
+.white {
+  color: var(--white);
+}
+.crayola {
+  color: var(--crayola);
+}
+.default-size {
+  font-size: 1.1rem;
 }
