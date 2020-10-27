@@ -26,9 +26,12 @@ const Index = () => {
             and healthcare.
           </p>
           <div className="socials">
-            <Social href="https://twitter.com/" icon="twitter" />
-            <Social href="https://twitter.com/" icon="youtube" />
-            <Social href="https://twitter.com/" icon="github" />
+            <Social href="https://twitter.com/phamn23" icon="twitter" />
+            <Social
+              href="https://www.youtube.com/channel/UChMBU9Tti39CrTOZJH_xy1w"
+              icon="youtube"
+            />
+            <Social href="https://github.com/nathan-pham" icon="github" />
           </div>
         </div>
         <div className="project-icon">

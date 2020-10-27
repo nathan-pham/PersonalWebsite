@@ -3,6 +3,8 @@ import "../styles/globals.css";
 import "../styles/flex.css";
 
 import "../styles/root/index.css";
+import "../styles/root/about.css";
+import "../styles/root/contact.css";
 
 const App = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;

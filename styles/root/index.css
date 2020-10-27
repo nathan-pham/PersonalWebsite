@@ -13,7 +13,7 @@
   position: absolute;
   margin: 0;
   top: 2rem;
-  left: 7.125rem;
+  left: 2rem;
   text-transform: uppercase;
   font-size: 0.9rem;
 }
@@ -40,7 +40,7 @@
 }
 #root-home .hero .container {
   padding: 1rem;
-  padding-left: calc(8vw + 5.125rem);
+  padding-left: 9vw;
   max-width: 50rem;
   /* background: red; */
 }
