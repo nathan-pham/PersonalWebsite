@@ -51,7 +51,7 @@ const Contact = () => {
           <Input name="Timeline" />
           <div className="triple flex full-width">
             <Card icon="rocket" name="Technology" />
-            <Card icon="egg" name="Chickens" />
+            <Card icon="egg" name="Agriculture" />
             <Card icon="heartbeat" name="Healthcare" />
           </div>
           <Input type="textarea" name="More Information" />
