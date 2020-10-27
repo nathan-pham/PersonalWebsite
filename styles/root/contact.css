@@ -1,0 +1,93 @@
+#root-contact {
+  background: var(--eerie);
+}
+#root-contact .section {
+  height: 100vh;
+  background: var(--eerie);
+}
+#root-contact .banner {
+  text-transform: uppercase;
+  margin: 1rem 0 2rem 0;
+}
+#root-contact .section {
+  text-align: center;
+}
+#root-contact .form {
+  min-width: 30rem;
+}
+#root-contact .form label {
+  display: block;
+  text-align: left;
+  margin: 1rem 0 0 0.5rem;
+}
+#root-contact .form .full-width {
+  width: 100%;
+}
+#root-contact .form .input {
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 0.1rem solid var(--crayola);
+  background: var(--white);
+  outline: none;
+  margin: 0.5rem;
+  width: calc(100% - 1rem);
+  font-family: "Karla", sans-serif;
+}
+#root-contact .form textarea.input {
+  resize: vertical;
+  max-height: 10rem;
+}
+#root-contact .card {
+  flex: 0 0 calc((100% / 3) - 1rem);
+  width: 100%;
+  border-radius: 0.5rem;
+  background: var(--jet);
+  margin: 0.5rem;
+  padding: 2rem 1rem;
+  cursor: pointer;
+}
+#root-contact .card label {
+  text-align: center;
+  display: block;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+#root-contact .card label > i {
+  font-size: 2.75rem;
+}
+#root-contact input[type="radio"] {
+  appearance: none;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.1rem;
+  background-clip: content-box;
+  border: 0.05rem solid var(--wolf);
+  background-color: var(--white);
+  border-radius: 50%;
+  outline: none;
+}
+#root-contact input[type="radio"]:checked {
+  background-color: var(--crayola);
+}
+#root-contact .form .triple {
+  margin-top: 0.5rem;
+}
+#root-contact button {
+  border: none;
+  margin: 0.5rem 0 0 0;
+  padding: 0.75rem 1rem;
+  background: var(--crayola);
+  color: var(--eerie);
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0.5rem 0.5rem var(--jet);
+  transform: translate(-0.25rem, -0.25rem);
+  transition: box-shadow 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#root-contact button:hover {
+  transform: translate(0, 0);
+  box-shadow: 0 0 var(--jet);
+}

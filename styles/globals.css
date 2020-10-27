@@ -21,11 +21,17 @@ body {
   font-family: inherit;
 }
 .padded {
-  padding-left: 5.125rem;
+  padding: 4rem 5rem;
 }
 .root {
   z-index: 0;
   position: relative;
+  padding-left: 5.125rem;
+}
+.root .section {
+  max-width: 55rem;
+  padding: 1rem;
+  margin: 0 auto;
 }
 .title {
   font-family: "Oswald", sans-serif;
@@ -38,4 +44,8 @@ body {
 }
 .default-size {
   font-size: 1.1rem;
+}
+button {
+  border-radius: 0.25rem;
+  outline: none;
 }

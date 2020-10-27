@@ -9,12 +9,14 @@
   backdrop-filter: blur(0.6rem);
   background: #fff;
   user-select: none;
+  border-right: 0.05rem solid var(--wolf);
 }
 .header > img {
   height: 3rem;
   width: 3rem;
   border-radius: 0.5rem;
   object-fit: center;
+  cursor: pointer;
 }
 .header > div {
   cursor: pointer;
@@ -71,7 +73,7 @@
   height: 100%;
   width: 100%;
   z-index: 5;
-  padding: 4rem calc(8vw + 5.125rem);
+  padding: 4rem calc(9vw + 5.125rem);
   vertical-align: middle;
   display: table;
   line-height: 3rem;

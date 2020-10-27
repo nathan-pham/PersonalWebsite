@@ -2,12 +2,14 @@ import Seo from "./seo";
 import Header from "../header/header";
 
 const Root = (props) => {
-  let title = props.title ? props.title : "Home";
   return (
     <>
-      <Seo title={title} description={props.description} />
+      <Seo title={props.title} description={props.description} />
       <Header></Header>
-      <div id={"root-" + title.toLowerCase()} className="root">
+      <div
+        id={"root-" + (props.title || "Home").toLowerCase()}
+        className="root"
+      >
         {props.children}
       </div>
     </>
