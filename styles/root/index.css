@@ -64,6 +64,11 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
+  transition: color 0.3s ease, border 0.3s ease;
+}
+#root-home .social:hover {
+  color: var(--eerie);
+  border: 0.05rem solid var(--crayola);
 }
 #root-home .social::before {
   content: "";

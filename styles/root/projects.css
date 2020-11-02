@@ -1,0 +1,22 @@
+#root-projects input[type="text"] {
+  padding: 0.5rem 0.75rem;
+}
+#root-projects .tags {
+  padding: 1rem 0;
+  user-select: none;
+}
+#root-projects .tags .tag {
+  margin: 0 1rem 0 0;
+  padding: 0.5rem;
+  display: inline-block;
+  width: fit-content;
+  border-radius: 0.25rem;
+  background: var(--jet);
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+#root-projects .tags .tag:hover {
+  background: var(--crayola);
+  color: var(--eerie);
+}

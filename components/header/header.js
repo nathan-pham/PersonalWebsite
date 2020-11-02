@@ -60,7 +60,9 @@ const Header = () => {
             ].join(" ")}
           ></div>
         </div>
-        <p className={[styles.name, "title"].join(" ")}>Nathan Pham</p>
+        <p className={[styles.name, "title", "default-size"].join(" ")}>
+          Nathan Pham
+        </p>
       </header>
       {transitions.map(
         ({ item, key, props: style }) =>

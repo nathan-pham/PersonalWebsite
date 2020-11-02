@@ -13,6 +13,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Karla", sans-serif;
+  background: var(--eerie);
 }
 *,
 *::before,
@@ -27,6 +28,7 @@ body {
   z-index: 0;
   position: relative;
   padding-left: 5.0625rem;
+  background: var(--eerie);
 }
 .root .section {
   max-width: 55rem;
@@ -44,4 +46,13 @@ body {
 }
 .default-size {
   font-size: 1.1rem;
+}
+input[type="text"],
+textarea {
+  border-radius: 0.25rem;
+  border: 0.1rem solid var(--crayola);
+  background: var(--jet);
+  color: var(--white);
+  outline: none;
+  font-family: "Karla", sans-serif;
 }
