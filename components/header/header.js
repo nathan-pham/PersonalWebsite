@@ -19,8 +19,8 @@ const Modal = ({ style }) => {
         <Title href="/">Home</Title>
         <Title>Blog</Title>
         <Title href="/about">About</Title>
-        <Title>Works</Title>
         <Title>Resume</Title>
+        <Title>Projects</Title>
         <Title href="/contact">Contact</Title>
       </div>
     </animated.div>
