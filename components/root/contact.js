@@ -9,7 +9,7 @@ const Input = ({ name, label, type }) => {
         <textarea
           id={formName}
           name={formName}
-          className="input default-size"
+          className="default-size"
         ></textarea>
       ) : (
         <input
@@ -17,7 +17,7 @@ const Input = ({ name, label, type }) => {
           name={formName}
           type="text"
           autoComplete="off"
-          className="input default-size"
+          className="default-size"
         />
       )}
     </div>

@@ -1,9 +1,5 @@
-#root-contact {
-  background: var(--eerie);
-}
 #root-contact .section {
   min-height: 100vh;
-  background: var(--eerie);
 }
 #root-contact .banner {
   text-transform: uppercase;
@@ -23,19 +19,17 @@
 #root-contact .form .full-width {
   width: 100%;
 }
-#root-contact .form .input {
-  border-radius: 0.25rem;
+#root-contact .form input[type="text"],
+#root-contact .form textarea {
   padding: 0.5rem 0.75rem;
-  border: 0.1rem solid var(--crayola);
-  background: var(--white);
-  outline: none;
   margin: 0.5rem;
   width: calc(100% - 1rem);
   font-family: "Karla", sans-serif;
 }
-#root-contact .form textarea.input {
+#root-contact .form textarea {
   resize: vertical;
   max-height: 10rem;
+  min-height: 3rem;
 }
 #root-contact .card {
   flex: 0 0 calc((100% / 3) - 1rem);
@@ -75,26 +69,26 @@
   margin-top: 0.5rem;
 }
 #root-contact button {
-  border: 0.1rem solid var(--crayola);
-  background: transparent;
+  background: var(--jet);
   outline: none !important;
   margin: 0.5rem 0 0 0;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   z-index: 1;
   cursor: pointer;
   position: relative;
   border-radius: 0.25rem;
   text-transform: uppercase;
-  transition: color 0.3s ease, border 0.3s ease;
+  border: none;
+  transition: color 0.3s ease, border 0.1s ease;
 }
 #root-contact button::after {
   content: "";
   display: block;
   position: absolute;
   width: 0;
-  height: calc(100% + 0.2rem);
+  height: 100%;
   right: 0;
-  top: -0.1rem;
+  top: 0;
   z-index: -1;
   background: var(--crayola);
   border-radius: 0.25rem;
@@ -102,7 +96,6 @@
 }
 #root-contact button:hover {
   color: var(--eerie);
-  border: 0.1rem solid transparent;
 }
 #root-contact button:hover::after {
   left: 0;
