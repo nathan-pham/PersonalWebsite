@@ -1,12 +1,6 @@
 import Root from "../components/body/root";
-
-const Social = (props) => {
-  return (
-    <a href={props.href} className="social white">
-      <i className={`fab fa-${props.icon}`}></i>
-    </a>
-  );
-};
+import { Social } from "../components/root/index";
+import Link from "next/link";
 
 const Index = () => {
   return (
@@ -34,9 +28,11 @@ const Index = () => {
             <Social href="https://github.com/nathan-pham" icon="github" />
           </div>
         </div>
-        <div className="project-icon">
-          <div></div>
-        </div>
+        <Link href="/projects">
+          <div className="project-icon">
+            <div></div>
+          </div>
+        </Link>
       </div>
     </Root>
   );
