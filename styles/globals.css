@@ -26,7 +26,7 @@ body {
 .root {
   z-index: 0;
   position: relative;
-  padding-left: 5.125rem;
+  padding-left: 5.0625rem;
 }
 .root .section {
   max-width: 55rem;
@@ -44,8 +44,4 @@ body {
 }
 .default-size {
   font-size: 1.1rem;
-}
-button {
-  border-radius: 0.25rem;
-  outline: none;
 }

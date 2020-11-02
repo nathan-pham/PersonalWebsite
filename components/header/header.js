@@ -16,16 +16,19 @@ const Modal = ({ style }) => {
   return (
     <animated.div style={style} className={[styles.modal]}>
       <div>
+        <img src="/icons/apple-icon.png" alt="N Logo" />
         <Title href="/">Home</Title>
-        <Title>Blog</Title>
         <Title href="/about">About</Title>
-        <Title>Works</Title>
-        <Title>Resume</Title>
+        <Title href="/blog">Blog</Title>
+        <Title href="/projects">Projects</Title>
         <Title href="/contact">Contact</Title>
       </div>
     </animated.div>
   );
 };
+{
+  /* <Title>Resume</Title> */
+}
 
 const Header = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -46,9 +49,6 @@ const Header = () => {
           "align-center",
         ].join(" ")}
       >
-        <Link href="/">
-          <img src="/icons/apple-icon.png" alt="N Logo" />
-        </Link>
         <div
           onClick={() => setModalVisible(!modalVisible)}
           className={["flex", "align-center", "justify-center"].join(" ")}
@@ -60,6 +60,7 @@ const Header = () => {
             ].join(" ")}
           ></div>
         </div>
+        <p className={[styles.name, "title"].join(" ")}>Nathan Pham</p>
       </header>
       {transitions.map(
         ({ item, key, props: style }) =>
