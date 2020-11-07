@@ -1,22 +1,85 @@
 #root-projects input[type="text"] {
   padding: 0.5rem 0.75rem;
 }
-#root-projects .tags {
-  padding: 1rem 0;
-  user-select: none;
+#root-projects .filters {
+  padding: 0 0 1rem 0;
 }
-#root-projects .tags .tag {
-  margin: 0 1rem 0 0;
+#root-projects .tag {
   padding: 0.5rem;
   display: inline-block;
   width: fit-content;
   border-radius: 0.25rem;
+  user-select: none;
+  background: var(--crayola);
+}
+#root-projects .filters .tag {
+  margin: 1rem 1rem 0 0;
   background: var(--jet);
   color: var(--white);
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
-#root-projects .tags .tag:hover {
+#root-projects .filters .tag:hover {
   background: var(--crayola);
   color: var(--eerie);
+}
+#root-projects .project {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background: var(--jet);
+  margin: 0 0 1rem 0;
+  position: relative;
+}
+#root-projects .project .content {
+  position: relative;
+  z-index: 3;
+}
+#root-projects .project .information {
+  position: absolute;
+  top: 0;
+  right: -3rem;
+  border-right: 3rem solid transparent;
+  z-index: 1;
+}
+#root-projects .project .information::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--jet);
+  border-radius: 0.25rem;
+  z-index: 2;
+}
+#root-projects .project .information a {
+  height: 2.25rem;
+  width: 2.25rem;
+  background: var(--jet);
+  border-radius: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 100%;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#root-projects .project .information a:last-child {
+  margin: 0.5rem 0 0 0;
+  transition-delay: 0.1s;
+}
+#root-projects .project:hover .information a {
+  transform: translateX(calc(100% + 0.5rem));
+  opacity: 1;
+}
+/*
+<div className="information">
+        <i className="fab fa-github"></i>
+        <i className="fas fa-external-link-alt"></i>
+      </div>*/
+#root-projects .project h2 {
+  margin: 0;
+}
+#root-projects .project p {
+  margin: 1rem 0 0 0;
 }
