@@ -1,22 +1,71 @@
 #root-projects input[type="text"] {
   padding: 0.5rem 0.75rem;
 }
-#root-projects .tags {
-  padding: 1rem 0;
-  user-select: none;
+#root-projects .filters {
+  padding: 0 0 1rem 0;
 }
-#root-projects .tags .tag {
-  margin: 0 1rem 0 0;
+#root-projects .tag {
   padding: 0.5rem;
   display: inline-block;
   width: fit-content;
   border-radius: 0.25rem;
+  user-select: none;
+  /* background: var(--crayola); */
+}
+#root-projects .filters .tag {
+  margin: 1rem 1rem 0 0;
   background: var(--jet);
   color: var(--white);
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
-#root-projects .tags .tag:hover {
+#root-projects .filters .tag:hover {
   background: var(--crayola);
   color: var(--eerie);
+}
+#root-projects .project {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background: var(--jet);
+  margin: 0 0 1rem 0;
+  position: relative;
+}
+#root-projects .tag.libraries {
+  background: rgb(100, 230, 80);
+}
+#root-projects .tag.hackathons {
+  background: rgb(255, 100, 100);
+}
+#root-projects .tag.games {
+  background: rgb(40, 170, 250);
+}
+#root-projects .project .tag:first-letter {
+  text-transform: uppercase;
+}
+#root-projects .project .content {
+  position: relative;
+  z-index: 3;
+}
+#root-projects .project .information {
+  margin: 1rem 0 0 0;
+}
+#root-projects .project .information a {
+  border-radius: 0.25rem;
+  height: 2rem;
+  width: 2rem;
+  text-decoration: none;
+  background: var(--crayola);
+  color: var(--eerie);
+  margin: 0 1rem 0 0;
+}
+/*
+<div className="information">
+        <i className="fab fa-github"></i>
+        <i className="fas fa-external-link-alt"></i>
+      </div>*/
+#root-projects .project h2 {
+  margin: 0;
+}
+#root-projects .project p {
+  margin: 1rem 0 0 0;
 }
