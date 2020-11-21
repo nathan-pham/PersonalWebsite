@@ -36,6 +36,9 @@ body {
   padding: 1rem;
   margin: 0 auto;
 }
+.pointer {
+  cursor: pointer;
+}
 .title {
   font-family: "Oswald", sans-serif;
 }

@@ -16,12 +16,12 @@ const Modal = ({ style }) => {
   return (
     <animated.div style={style} className={[styles.modal]}>
       <div>
-        <img src="/icons/apple-icon.png" alt="N Logo" />
-        <Title href="/">Home</Title>
+        <Link href="/">
+          <img className="pointer" src="/icons/apple-icon.png" alt="N Logo" />
+        </Link>
         <Title href="/about">About</Title>
-        <Title href="/blog">Blog</Title>
-        <Title href="/projects">Projects</Title>
         <Title href="/contact">Contact</Title>
+        <Title href="/projects">Projects</Title>
       </div>
     </animated.div>
   );
@@ -51,7 +51,7 @@ const Header = () => {
       >
         <div
           onClick={() => setModalVisible(!modalVisible)}
-          className={["flex", "align-center", "justify-center"].join(" ")}
+          className="flex align-center justify-center"
         >
           <div
             className={[

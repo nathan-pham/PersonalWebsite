@@ -1,9 +1,14 @@
-const Project = (props) => {
-  return (
-    <>
-      <p>Project</p>
-    </>
-  );
-};
+const projectList = [
+  {
+    title: "Eating cheezits",
+    tag: "libraries",
+    description:
+      "adventures of eating cheezitsadventures of eating cheezitsadventures of eating cheezitsadventures of eating cheezitsadventures of eating cheezitsadventures of eating cheezitsadventures of eating cheezitsadventures of eating cheezits",
+    external: {
+      git: "whatever",
+      demo: "haha",
+    },
+  },
+];
 
-export { Project };
+export default projectList;

@@ -10,7 +10,7 @@
   width: fit-content;
   border-radius: 0.25rem;
   user-select: none;
-  background: var(--crayola);
+  /* background: var(--crayola); */
 }
 #root-projects .filters .tag {
   margin: 1rem 1rem 0 0;
@@ -30,47 +30,33 @@
   margin: 0 0 1rem 0;
   position: relative;
 }
+#root-projects .tag.libraries {
+  background: rgb(100, 230, 80);
+}
+#root-projects .tag.hackathons {
+  background: rgb(255, 100, 100);
+}
+#root-projects .tag.games {
+  background: rgb(40, 170, 250);
+}
+#root-projects .project .tag:first-letter {
+  text-transform: uppercase;
+}
 #root-projects .project .content {
   position: relative;
   z-index: 3;
 }
 #root-projects .project .information {
-  position: absolute;
-  top: 0;
-  right: -3rem;
-  border-right: 3rem solid transparent;
-  z-index: 1;
-}
-#root-projects .project .information::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background: var(--jet);
-  border-radius: 0.25rem;
-  z-index: 2;
+  margin: 1rem 0 0 0;
 }
 #root-projects .project .information a {
-  height: 2.25rem;
-  width: 2.25rem;
-  background: var(--jet);
   border-radius: 0.25rem;
+  height: 2rem;
+  width: 2rem;
   text-decoration: none;
-  cursor: pointer;
-  font-size: 100%;
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-#root-projects .project .information a:last-child {
-  margin: 0.5rem 0 0 0;
-  transition-delay: 0.1s;
-}
-#root-projects .project:hover .information a {
-  transform: translateX(calc(100% + 0.5rem));
-  opacity: 1;
+  background: var(--crayola);
+  color: var(--eerie);
+  margin: 0 1rem 0 0;
 }
 /*
 <div className="information">
