@@ -1,6 +1,6 @@
 # Nathan Pham
 
-Official profile of Nathan Pham
+This portfolio has been depreciated in favor of official-portfolio.
 
 # Resources
 
